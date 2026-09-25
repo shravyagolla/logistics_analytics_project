@@ -33,20 +33,20 @@ Gold Layer
      |
      v
 Business Analysis & Visualizations
+```
 
-Medallion Architecture
-
-Bronze Layer
+## Medallion Architecture
+## Bronze Layer
 
 Loads the raw transportation datasets into Databricks.
 
-Silver Layer
+## Silver Layer
 
 Cleans and prepares the data.
 Standardizes data types and structures.
 Creates analysis-ready Silver tables.
 
-Gold Layer
+## Gold Layer
 
 Creates business-level analytical tables.
 Performs aggregations and joins.
@@ -60,7 +60,7 @@ GitHub
 Databricks Notebooks
 Medallion Architecture
 
-Project Notebooks
+## Project Notebooks
 | Notebook                     | Analysis                                     |
 | ---------------------------- | -------------------------------------------- |
 | 01_Bronze_Layer              | Raw data ingestion                           |
@@ -73,170 +73,162 @@ Project Notebooks
 | 08_Gold_Customer_Analysis    | Customer revenue and service-level analysis  |
 | 09_Gold_Safety_Metrics       | Safety incidents and accident analysis       |
 | 10_Gold_Seasonal_Patterns    | Monthly and seasonal transportation patterns |
-Business Questions
-1. Driver Performance
 
+## Business Questions
+1. Driver Performance:
 How is each driver performing in terms of on-time delivery rate, MPG, and revenue generated per mile?
 
-2. Route Profitability
-
+2. Route Profitability:
 Which routes or lanes are most and least profitable based on revenue versus operating costs?
 
-3. Fleet Utilization
-
+3. Fleet Utilization:
 How effectively is each truck or asset being utilized based on miles driven and revenue generated per asset?
 
-4. Maintenance Analysis
-
+4. Maintenance Analysis:
 What is the maintenance cost per mile, and how does vehicle downtime impact fleet operations and profitability?
 
-5. Fuel Efficiency
-
+5. Fuel Efficiency:
 How does fuel efficiency (MPG) trend over time, and which routes have the highest and lowest fuel costs?
 
-6. Customer Analysis
-
+6. Customer Analysis:
 How much revenue is generated from each customer, and how well are customer service-level requirements being met?
 
-7. Safety Metrics
-
+7. Safety Metrics:
 What are the incident rates and number of preventable accidents by driver, vehicle, route, or time period?
 
 8. Seasonal Patterns
-
 How do load volumes and freight rates fluctuate across different seasons, months, or periods?
 
-Key Gold Tables
-gold_driver_performance
-gold_route_profitability
-gold_fleet_utilization
-gold_maintenance_analysis
-gold_fuel_efficiency
-gold_customer_analysis
-gold_safety_metrics
-gold_seasonal_patterns
-Data Pipeline
+## Key Gold Tables
+
+- `gold_driver_performance`
+- `gold_route_profitability`
+- `gold_fleet_utilization`
+- `gold_maintenance_analysis`
+- `gold_fuel_efficiency`
+- `gold_customer_analysis`
+- `gold_safety_metrics`
+- `gold_seasonal_patterns`
+
+## Data Pipeline
 
 The project follows this workflow:
+
+```text
 Raw Transportation Data
-        |
-        v
+          |
+          v
 Bronze Tables
-        |
-        v
+          |
+          v
 Silver Tables
-        |
-        v
+          |
+          v
 Gold Analytical Tables
-        |
-        v
+          |
+          v
 Business Insights
-Key Analysis Areas
-Driver Performance
+```
+
+## Key Analysis Areas
+## Driver Performance
 
 Analyzes:
 
-Total trips
-Total miles
-Total revenue
-On-time delivery rate
-MPG
-Revenue per mile
-Route Profitability
+- Total trips
+- Total miles
+- Total revenue
+- On-time delivery rate
+- MPG
+- Revenue per mile
+- Route Profitability
 
+## Route Profitability
 Analyzes:
 
-Total loads
-Revenue
-Fuel cost
-Profit
-Profit per mile
-Fleet Utilization
+- Total loads
+- Revenue
+- Fuel cost
+- Profit
+- Profit per mile
+- Fleet Utilization
 
+## Fleet Utilization
 Analyzes:
 
-Trips completed
-Miles driven
-Revenue
-Utilization rate
-MPG
-Maintenance cost
-Downtime
-Maintenance
+- Trips completed
+- Miles driven
+- Revenue
+- Utilization rate
+- MPG
+- Maintenance cost
+- Downtime
+- Maintenance
 
+## Maintenance Analysis
 Analyzes:
 
-Maintenance events
-Maintenance cost
-Maintenance cost per mile
-Downtime
-Labor and parts costs
-Fuel Efficiency
+- Maintenance events
+- Maintenance cost
+- Maintenance cost per mile
+- Downtime
+- Fuel Efficiency
 
+## Fuel Efficiency
 Analyzes:
 
-MPG over time
-Fuel consumption
-Fuel cost by route
-Distance traveled
-Customer Analysis
+- MPG over time
+- Fuel consumption
+- Fuel cost by route
+- Distance traveled
+- Customer Analysis
 
+## Customer Analysis
 Analyzes:
 
-Customer revenue
-Number of loads
-On-time deliveries
-Detention time
-Safety
+- Customer revenue
+- Number of loads
+- On-time deliveries
+- Detention time
+- Safety
 
+## Safety Metrics
 Analyzes:
 
-Total incidents
-Preventable accidents
-At-fault incidents
-Injury incidents
-Vehicle and cargo damage
-Incident rates
-Seasonal Patterns
+- Total incidents
+- Preventable accidents
+- At-fault incidents
+- Injury incidents
+- Vehicle and cargo damage
+- Incident rates
+- Seasonal Patterns
 
+## Seasonal Patterns
 Analyzes:
 
-Monthly load volume
-Monthly revenue
-Freight rate per mile
-Seasonal load volume
-Seasonal freight rates
-Data Visualization
+- Monthly load volume
+- Monthly revenue
+- Freight rate per mile
+- Seasonal load volume
+- Seasonal freight rates
 
+## Data Visualization
 Databricks visualizations are used to present:
 
-Driver revenue and delivery performance
-Route profitability
-Fleet utilization
-Maintenance cost and downtime
-Fuel efficiency trends
-Customer revenue and service levels
-Safety incidents
-Monthly and seasonal transportation patterns
-Project Outcome
+- Driver revenue and delivery performance
+- Route profitability
+- Fleet utilization
+- Maintenance cost and downtime
+- Fuel efficiency trends
+- Customer revenue and service levels
+- Safety incidents
+- Monthly and seasonal transportation patterns
 
+## Project Outcome
 The project demonstrates how Databricks and PySpark can be used to build an end-to-end transportation analytics pipeline using the Medallion Architecture.
 
 The final Gold layer provides business-ready datasets that can be used to understand transportation performance, fleet operations, maintenance, fuel efficiency, customer service, safety, and seasonal trends.
 
-Repository Structure
-logistics_analytics_project/
-│
-├── 01_Bronze_Layer.ipynb
-├── 02_Silver_Layer.ipynb
-├── 03_Gold_Driver_Performance.ipynb
-├── 04_Gold_Route_Profitability.ipynb
-├── 05_Gold_Fleet_Utilization.ipynb
-├── 06_Gold_Maintenance_Analysis.ipynb
-├── 07_Gold_Fuel_Efficiency.ipynb
-├── 08_Gold_Customer_Analysis.ipynb
-├── 09_Gold_Safety_Metrics.ipynb
-├── 10_Gold_Seasonal_Patterns.ipynb
-└── README.md
 Author
+
 Shravya
